@@ -1,26 +1,43 @@
-import { IoIosSearch } from "react-icons/io";
-import TextField from "../TextField";
-import IconWrapper from "../IconWrapper";
-import { IoCameraOutline, IoCartOutline } from "react-icons/io5";
-import { MdFavoriteBorder } from "react-icons/md";
-import { BsPerson } from "react-icons/bs";
-import { RiArrowDropDownLine } from "react-icons/ri";
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import style from "./nav.module.css";
-import logo from "../../assets/logo.png";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import mobileLogo from "../../assets/logo-mobile.png";
+import cancelIcon from "../../assets/cancel.png";
 
-function Nav() {
+function Nav({ handleClose }) {
   return (
-    <div className={style.mainHeader}>
-      <TextField leftIcon={<IoIosSearch />} />
-      <div>
-        <img src={logo} alt="" />
+    <nav className={style.nav}>
+      <div className={style.mobileOnly}>
+        <img src={mobileLogo} alt="" />
+        <img src={cancelIcon} alt="" onClick={handleClose} />
       </div>
-      <div className={style.icons}>
-        <IconWrapper icon={<IoCartOutline />} />
-        <IconWrapper icon={<MdFavoriteBorder />} />
-        <IconWrapper icon={<BsPerson />} />
-      </div>
-    </div>
+      <ul className={style.links}>
+        <li>
+          <Link to={"/"}>home</Link>
+        </li>
+        <li>
+          categories <RiArrowDropDownLine />
+        </li>
+        <li>
+          brands <RiArrowDropDownLine />
+        </li>
+        <li>
+          <Link to={"sale"}>sale</Link>
+        </li>
+        <li>
+          <Link to={"blog"}>blog</Link>
+        </li>
+        <li>
+          support <RiArrowDropDownLine />
+        </li>
+        <div>
+          <li>Wishlist</li>
+          <li>Profile</li>
+          <li>Help</li>
+        </div>
+      </ul>
+    </nav>
   );
 }
 

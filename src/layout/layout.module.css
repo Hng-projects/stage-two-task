@@ -1,7 +1,6 @@
 .header {
   width: 100%;
   padding: 20px 30px;
-  border: 1px solid gold;
 
   @media screen and (max-width: 1023px) {
     & {
@@ -11,7 +10,8 @@
 
   @media screen and (max-width: 600px) {
     & {
-      border: 5px solid blue;
+      padding: 10px 5px;
+      position: relative;
     }
   }
 }

@@ -1,18 +1,11 @@
 .textfield {
-  position: reltive;
-  /* outline: 1px solid red; */
-  width: fit-content;
+  position: relative;
 }
 
-.leftIcon,
-.rightIcon {
+.icon {
   position: absolute;
-  top: 30px;
-  /* transform: translateY(-50%); */
-}
-
-.rightIcon {
-  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .input {

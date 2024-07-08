@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
-import { Nav } from "../components";
+import { Header } from "../components";
 import style from "./layout.module.css";
 
 function Layout() {
   return (
     <>
       <header className={style.header}>
-        <Nav />
+        <Header />
       </header>
-      <main>
+      <main className={style.main}>
         <Outlet />
       </main>
       <footer>
