@@ -1,0 +1,56 @@
+.mainHeader {
+  /* border: 1px solid blue; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > h1 {
+    font-size: calc(36 / 16 * 1rem);
+    font-weight: 400;
+    color: var(--color-4);
+
+    @media screen and (max-width: 1023px) {
+      & {
+        font-size: calc(24 / 16 * 1rem);
+      }
+    }
+
+    & > span {
+      color: var(--color-3);
+    }
+  }
+}
+
+.icons {
+  outline: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  /* outline: 1px solid red; */
+  gap: 20px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  & > div {
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.flag {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+
+  & + span {
+    text-transform: uppercase;
+  }
+}
