@@ -6,8 +6,21 @@
   padding: 0;
 }
 
+:root {
+  --color-1: #d7f2ba;
+  --color-2: #bde4a8;
+  --color-3: #9cc69b;
+  --color-4: #79b4a9;
+  --color-5: #676f54;
+}
+
 body {
   width: 100vw;
-  max-width: 1440px;
   min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
