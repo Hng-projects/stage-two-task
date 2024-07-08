@@ -10,10 +10,12 @@ import mobileLogo from "../../assets/logo-mobile.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import Nav from "../Nav";
+import useScreenSize from "../../hooks/use-screen-size";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(isMenuOpen);
+  const isSmallScreen = useScreenSize();
+
   return (
     <>
       <div className={style.mainHeader}>
@@ -35,7 +37,13 @@ function Header() {
           <IconWrapper icon={<BsPerson />} />
         </div>
       </div>
-      {isMenuOpen && <Nav handleClose={() => setIsMenuOpen(!isMenuOpen)} />}
+      {isSmallScreen ? (
+        isMenuOpen ? (
+          <Nav handleClose={() => setIsMenuOpen(!isMenuOpen)} />
+        ) : null
+      ) : (
+        <Nav />
+      )}
     </>
   );
 }
