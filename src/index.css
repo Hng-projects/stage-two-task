@@ -14,11 +14,19 @@
   --color-5: #676f54;
   --bg-color: #fcfcfc;
   --text-color: #1f1919;
+  --text-color-2: #f7fbfa;
+  --text-color-3: #c3c3c3;
+  --text-color-active: #99e1d4;
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
 }
 
 #root {
