@@ -1,0 +1,7 @@
+.page {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid black;
+}

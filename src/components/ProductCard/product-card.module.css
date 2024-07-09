@@ -1,0 +1,38 @@
+.card {
+  width: 100%;
+  max-width: 397px;
+
+  @media screen and (max-width: 1023px) {
+    & {
+      max-width: 300px;
+    }
+  }
+}
+
+.imgBox {
+  background-color: #f7fbfa;
+  width: 100%;
+  padding: 10px;
+}
+
+.title {
+  padding: 10px;
+  color: #1f1919;
+  font-size: calc(20 / 16 * 1rem);
+  text-transform: capitalize;
+}
+
+.priceBox {
+  padding: 10px;
+  font-size: calc(25 / 16 * 1rem);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #1f1919;
+
+  & > p:nth-of-type(1) {
+    color: #a0a0a0;
+    text-decoration: line-through;
+  }
+}
