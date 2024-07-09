@@ -1,0 +1,22 @@
+.heading {
+  border: 1px solid red;
+  display: grid;
+  place-items: center;
+}
+
+.route {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text-color-3);
+
+  & > p:nth-of-type(1) {
+    color: var(--text-color-active);
+    font-weight: 700;
+  }
+
+  & > span {
+    display: grid;
+    place-items: center;
+  }
+}

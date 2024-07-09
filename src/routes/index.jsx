@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout";
-import { Checkout, ErrorPage, Products } from "../pages";
+import { Cart, Checkout, ErrorPage, Payment, Products } from "../pages";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +9,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Products /> },
-      { path: "checkout", element: <Checkout /> },
+      {
+        path: "cart",
+        element: <Cart />,
+        children: [
+          { path: "checkout", element: <Checkout /> },
+          { path: "payment", element: <Payment /> },
+        ],
+      },
     ],
   },
 ]);
