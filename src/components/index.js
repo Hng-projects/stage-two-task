@@ -6,3 +6,4 @@ export { default as ProductList } from "./ProductList";
 export { default as Footer } from "./Footer";
 export { default as PageBox } from "./PageBox";
 export { default as Table } from "./Table";
+export { default as CartItem } from "./CartItem";

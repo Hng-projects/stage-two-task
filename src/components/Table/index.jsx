@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Column } from "react-aria-components";
 import { TableHeader } from "react-aria-components";
 import { Table as AriaTable } from "react-aria-components";
@@ -37,14 +38,14 @@ function Table({ headers }) {
             </div>
             <p>{product.name}</p>
           </Cell>
-          <Cell>{product.current_price}</Cell>
+          <Cell>${product.current_price}</Cell>
           <Cell>
             <NumberField
               defaultValue={1}
               minValue={0}
               aria-labelledby="product quantity"
             >
-              <Group>
+              <Group className={style.group}>
                 <Button slot="decrement">-</Button>
                 <Input />
                 <Button slot="increment">+</Button>
@@ -63,8 +64,18 @@ function Table({ headers }) {
             </div>
             <p>{product.name}</p>
           </Cell>
-          <Cell>{product.current_price}</Cell>
-          <Cell>5</Cell>
+          <Cell>${product.current_price}</Cell>
+          <Cell><NumberField
+              defaultValue={1}
+              minValue={0}
+              aria-labelledby="product quantity"
+            >
+              <Group className={style.group}>
+                <Button slot="decrement">-</Button>
+                <Input />
+                <Button slot="increment">+</Button>
+              </Group>
+            </NumberField></Cell>
           <Cell>$92</Cell>
           <Cell>
             <img src={cancelIcon} alt="" />

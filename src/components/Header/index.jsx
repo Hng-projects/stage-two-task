@@ -11,6 +11,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import Nav from "../Nav";
 import useScreenSize from "../../hooks/use-screen-size";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +33,9 @@ function Header() {
           <img src={mobileLogo} alt="" />
         </picture>
         <div className={style.icons}>
-          <IconWrapper icon={<IoCartOutline />} />
+          <Link to={"cart"}>
+            <IconWrapper icon={<IoCartOutline />} />
+          </Link>
           <IconWrapper icon={<MdFavoriteBorder />} />
           <IconWrapper icon={<BsPerson />} />
         </div>
