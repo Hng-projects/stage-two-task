@@ -3,9 +3,15 @@
   max-width: 397px;
   position: relative;
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 800px) {
     & {
       max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      max-width: 100%;
     }
   }
 
