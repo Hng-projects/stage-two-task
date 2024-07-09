@@ -52,7 +52,7 @@
 
   @media screen and (max-width: 600px) {
     & {
-      width: 100%;
+      width: 50%;
     }
   }
 
@@ -83,6 +83,26 @@
 
   @media screen and (max-width: 600px) {
     & {
+      width: 100%;
+    }
+  }
+
+  & input,
+  & button {
+    padding: 12px 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: transparent;
+  }
+
+  & button {
+    background-color: #bde4a8;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 600px) {
+    & input,
+    & button {
       width: 100%;
     }
   }
