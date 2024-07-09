@@ -4,6 +4,10 @@
   background-color: #000;
   padding: 40px 60px;
   color: var(--text-color-2);
+  background-image: url("../../assets/hero.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   @media screen and (max-width: 600px) {
     & {
@@ -46,10 +50,9 @@
 
   @media screen and (max-width: 600px) {
     & {
-      margin: 10px;
       position: absolute;
-      top: -15%;
-      left: 0;
+      top: -120px;
+      left: 13px;
       font-size: calc(13 / 16 * 1rem);
     }
   }
@@ -67,6 +70,13 @@
 
 .filterBox {
   padding: 30px 45px;
+
+  @media screen and (max-width: 600px) {
+    & {
+      padding: 20px 10px;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .box1 {
