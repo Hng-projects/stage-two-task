@@ -4,7 +4,7 @@ import { Cart, Checkout, ErrorPage, Payment, Products } from "../pages";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/stage-two-task/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
