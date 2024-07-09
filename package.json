@@ -2,6 +2,7 @@
   "name": "hng-stage-two-task",
   "private": true,
   "version": "0.0.0",
+  "hompage": "https://hng-projects.github.io/stage-two-task/",
   "type": "module",
   "scripts": {
     "predeploy": "pnpm run build",
