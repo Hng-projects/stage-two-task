@@ -12,11 +12,9 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart />,
-        children: [
-          { path: "checkout", element: <Checkout /> },
-          { path: "payment", element: <Payment /> },
-        ],
       },
+      { path: "cart/checkout", element: <Checkout /> },
+      { path: "payment", element: <Payment /> },
     ],
   },
 ]);
