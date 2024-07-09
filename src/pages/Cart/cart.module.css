@@ -1,6 +1,11 @@
 .heading {
   display: grid;
   place-items: center;
+
+  & > h1 {
+    font-size: calc(39 / 16 * 1rem);
+    font-weight: 600;
+  }
 }
 
 .route {

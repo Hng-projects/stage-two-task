@@ -1,13 +1,14 @@
 .list {
   padding: 20px 45px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 35px;
   flex-wrap: wrap;
+  flex-basis: 100%;
 
   @media screen and (max-width: 600px) {
     & {
+      align-items: center;
       padding-inline: 10px;
     }
   }

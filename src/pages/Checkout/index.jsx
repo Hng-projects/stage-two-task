@@ -114,41 +114,44 @@ function Checkout() {
                 </div>
               </RadioGroup>
             </div>
-            <div className={style.info}>
-              <div className={style.formHeading}>
-                <p>Billing information</p>
-                <p>Complete your purchase with your billing information</p>
-              </div>
-              <div className={style.box1}>
-                <TextField>
-                  <Label>Full Name</Label>
-                  <Input />
-                </TextField>
-                <div className={style.double}>
-                  <TextField>
-                    <Label>Email</Label>
-                    <Input />
-                  </TextField>
-                  <NumberField>
-                    <Label>Phone Number</Label>
-                    <Input />
-                  </NumberField>
-                </div>
-                <TextField>
-                  <Label>Street address and house number</Label>
-                  <Input />
-                </TextField>
-                <div className={style.double}>
-                  <TextField>
-                    <Label>Country</Label>
-                    <Input />
-                  </TextField>
-                  <NumberField>
-                    <Label>ZIP Code</Label>
-                    <Input />
-                  </NumberField>
-                </div>
-              </div>
+          </div>
+
+          <div className={`${style.box1} ${style.box3}`}>
+            <div className={style.formHeading}>
+              <p>Billing information</p>
+              <p>Complete your purchase with your billing information</p>
+            </div>
+            <div>
+              <input type="checkbox" name="billing" id="billing" />
+              <p>Same as shipping information</p>
+            </div>
+            <TextField>
+              <Label>Full Name</Label>
+              <Input />
+            </TextField>
+            <div className={style.double}>
+              <TextField>
+                <Label>Email</Label>
+                <Input />
+              </TextField>
+              <NumberField>
+                <Label>Phone Number</Label>
+                <Input />
+              </NumberField>
+            </div>
+            <TextField>
+              <Label>Street address and house number</Label>
+              <Input />
+            </TextField>
+            <div className={style.double}>
+              <TextField>
+                <Label>Country</Label>
+                <Input />
+              </TextField>
+              <NumberField>
+                <Label>ZIP Code</Label>
+                <Input />
+              </NumberField>
             </div>
           </div>
         </div>
@@ -157,6 +160,30 @@ function Checkout() {
           <div className={style.formHeading}>
             <p>order summary</p>
             <p>Here is a summary of the items you ordered</p>
+          </div>
+          <div>
+            <div className={style.os}>
+              <div className={style.right}>
+                <div>
+                  <p>subtotal</p> <p>$326</p>
+                </div>
+                <div>
+                  <p>shipping</p>
+                  <p>$44</p>
+                </div>
+                <div>
+                  <p>VAT (1%)</p>
+                  <p>$10</p>
+                </div>
+                <div>
+                  <p>total</p>
+                  <p>$380</p>
+                </div>
+              </div>
+              <Link to="payment" className={style.btn}>
+                pay
+              </Link>
+            </div>
           </div>
         </div>
       </div>

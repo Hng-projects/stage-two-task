@@ -12,7 +12,10 @@
 .imgBox {
   background-color: #f7fbfa;
   width: 100%;
+  height: 452px;
   padding: 10px;
+  display: grid;
+  place-items: center;
 }
 
 .title {

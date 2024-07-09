@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import style from "./product-card.module.css";
 
 function ProductCard({ product }) {
@@ -6,7 +7,7 @@ function ProductCard({ product }) {
   return (
     <div className={style.card}>
       <div className={style.imgBox}>
-        <img src={img} alt="" />
+        <img src={img} alt="" width={270} height={270} />
       </div>
       <div className={style.textBox}>
         <p className={style.title}> {name}</p>
