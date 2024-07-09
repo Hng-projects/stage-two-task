@@ -1,7 +1,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import style from "./products.module.css";
 import { FiSliders } from "react-icons/fi";
-import { ProductList, Select } from "../../components";
+import { PageBox, ProductList, Select } from "../../components";
 import { TbArrowsSort } from "react-icons/tb";
 import productsData from "../../data";
 
@@ -101,9 +101,16 @@ function Products() {
           </div>
         </div>
       </div>
-      <div className={style.products}>
-        <ProductList products={productsData} />
+      <ProductList products={productsData} />
+      <div className={style.pages}>
+        {[1, 2, 3, 4, "...", 25, 26, 27, 28, <IoIosArrowForward />].map(
+          (page) => (
+            <PageBox key={page} number={page} />
+          ),
+        )}
       </div>
+      <h2>recently viewed products</h2>
+      <ProductList products={productsData.slice(1, 3)} />
     </>
   );
 }

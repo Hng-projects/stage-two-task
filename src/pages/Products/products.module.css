@@ -96,6 +96,7 @@
 .box2 {
   display: flex;
   align-items: center;
+  row-gap: 20px;
   flex-wrap: wrap;
   flex-basis: 1;
   justify-content: space-between;
@@ -127,6 +128,12 @@
 
     & button {
       width: 150px;
+
+      @media screen and (max-width: 1023px) {
+        & {
+          width: 100px;
+        }
+      }
     }
 
     &:nth-of-type(1) button {
@@ -140,6 +147,39 @@
       & > span {
         display: grid;
         place-items: center;
+      }
+    }
+  }
+}
+
+.pages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+
+  @media screen and (max-width: 600px) {
+    & {
+      padding: 40px 10px;
+
+      & > div:nth-of-type(4) {
+        display: none;
+      }
+
+      & > div:nth-of-type(6) {
+        display: none;
+      }
+    }
+  }
+
+  & + h2 {
+    text-transform: capitalize;
+    padding: 40px 60px;
+
+    @media screen and (max-width: 600px) {
+      & {
+        padding-inline: 10px;
       }
     }
   }
